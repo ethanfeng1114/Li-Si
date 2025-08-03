@@ -9,7 +9,7 @@ style.use("ggplot")
 
 
 "Primary Active Material"
-rho_si = 2.336 #g/cm^3 from google
+rho_si = 2.336 #from ref (supplementary material)
 wt_si = .679 #% from ref
 "Secondary Active Material"
 rho_c6 = 2.255 # (C-NERGYTM KS6L)
@@ -19,7 +19,7 @@ rho_cb = 2.00 #from ref
 wt_cb = 0.02 # from ref
 rho_lipaa = 1.2 #ref
 wt_lipaa = 0.082 # ref
-rho_cmc = 1.6 #guess
+rho_cmc = 1.6 #ref
 wt_cmc = 0.002 #ref
 
 v_tot  = wt_si/rho_si + wt_c6/rho_c6 + wt_cb/rho_cb + wt_lipaa/rho_lipaa + wt_cmc/rho_cmc
@@ -43,7 +43,8 @@ model = pybamm.lithium_ion.DFN(
     }
 )
 
-param = get_parameter_values()
+param_dict = get_parameter_values()
+param = pybamm.ParameterValues(param_dict)
 
 
 
@@ -52,8 +53,8 @@ param = get_parameter_values()
 experiment = pybamm.Experiment(
     [
         (
-            "Discharge at C/10 until 3.0 V",
-            "Charge at C/10 until 4.2 V",
+            "Discharge at C/50 until 3.0 V",
+            "Charge at C/50 until 4.2 V",
         ),
     ]
 )
@@ -71,11 +72,12 @@ solution = []
 #????????
 
 
-
+ 
 sim = pybamm.Simulation(
     model,
     experiment=experiment,
     parameter_values=param,
+    solver=pybamm.CasadiSolver(dt_max=1, atol=1e-8, rtol=1e-8),
 )
 solution = sim.solve()
 stop = timeit.default_timer()
