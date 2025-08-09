@@ -60,6 +60,7 @@ stop = timeit.default_timer()
 print("running time: " + str(stop - start) + "s")
 
 
+
 ltype = ["k-", "r--", "b-.", "g:", "m-", "c--", "y-."]
 for i in range(0, len(v_si)):
     t_i = solution[i]["Time [s]"].entries / 3600
@@ -114,7 +115,6 @@ experiment = pybamm.Experiment(
             "Rest for 1 hour",
         ),
     ]
-    * 2
 )
 
 
