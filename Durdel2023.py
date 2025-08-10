@@ -469,6 +469,8 @@ def graphite_ocp_Enertech_Ai2020(sto):
 
 # Call dict via a function to avoid errors when editing in place
 def get_final_parameter_values():
+    #this is the final parameter set as copied from Durdel 2023
+
     """
     Parameters for a composite graphite/silicon negative electrode, from the paper
     :footcite:t:`Ai2022`, based on the paper :footcite:t:`Chen2020`, and references
@@ -613,6 +615,8 @@ def get_final_parameter_values():
 
 # Call dict via a function to avoid errors when editing in place
 def get_test_parameter_values():
+    #this is the testing stage where I change parameters individually to sim and debug
+
     """
     Parameters for a composite graphite/silicon negative electrode, from the paper
     :footcite:t:`Ai2022`, based on the paper :footcite:t:`Chen2020`, and references
@@ -765,6 +769,7 @@ def get_test_parameter_values():
 
 # Call dict via a function to avoid errors when editing in place
 def get_OG_parameter_values():
+    #this is the original parameters
     """
     Parameters for a composite graphite/silicon negative electrode, from the paper
     :footcite:t:`Ai2022`, based on the paper :footcite:t:`Chen2020`, and references
