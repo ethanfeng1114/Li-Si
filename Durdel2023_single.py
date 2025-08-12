@@ -150,8 +150,8 @@ def get_final_parameter_values():
         "Positive current collector specific heat capacity [J.kg-1.K-1]": 897.0,
         "Negative current collector thermal conductivity [W.m-1.K-1]": 267.467,
         "Positive current collector thermal conductivity [W.m-1.K-1]": 158.079,
-        "Nominal cell capacity [A.h]": 5.809e-3, #Supplementary material (causes weird behavior-- default is 5)
-        "Current function [A]": 5.809e-3, #??
+        "Nominal cell capacity [A.h]": 5.809e-3, #Supplementary material 
+        "Current function [A]": 5.809e-3, #
         "Contact resistance [Ohm]": 0,
         # negative electrode
         "Negative electrode conductivity [S.m-1]": 33.0, #3.4
@@ -176,8 +176,8 @@ def get_final_parameter_values():
         "Positive electrode conductivity [S.m-1]": 100, #3.4
         "Maximum concentration in positive electrode [mol.m-3]": 46400.0, #Table A2
         "Positive particle diffusivity [m2.s-1]": 6e-15, #3.6
-        "Positive electrode lithation OCP [V]": nca_ocp_lithiation_Durdel2023,
-        "Positive electrode delithation OCP [V]": nca_ocp_delithiation_Durdel2023,
+        "Positive electrode lithiation OCP [V]": nca_ocp_lithiation_Durdel2023,
+        "Positive electrode delithiation OCP [V]": nca_ocp_delithiation_Durdel2023,
         "Positive electrode OCP [V]": nca_ocp_average_Durdel2023,
         "Positive electrode porosity": 0.32, #Table A2
         "Positive electrode active material volume fraction": 0.61, #Table A2
