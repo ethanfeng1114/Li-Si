@@ -220,6 +220,8 @@ def get_final_parameter_values():
         "Open-circuit voltage at 100% SOC [V]": 4.2,
         "Initial concentration in negative electrode [mol.m-3]": 0.1732 * 3.22067e5,
         "Initial concentration in positive electrode [mol.m-3]": 0.4675 * 4.6400e4,
+        #"Initial concentration in negative electrode [mol.m-3]": 0.04 * 3.22067e5,
+        #"Initial concentration in positive electrode [mol.m-3]": 0.85 * 4.6400e4,
         "Initial temperature [K]": 298.15,
         # citations
         "citations": ["Kim2011"],
